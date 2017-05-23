@@ -1,0 +1,11 @@
+<template name="snippets">
+    <div class ="container">
+        {{#each snippets}}
+        <!--the each loop will go over each snippet in the collection
+        and display it as an individual line-->
+            <div class="snippet">{{text}}</div>
+            <!--the {{text}} field is a pointer to a property inside
+            the collection-->
+        {{/each}}
+    </div>
+</template>
