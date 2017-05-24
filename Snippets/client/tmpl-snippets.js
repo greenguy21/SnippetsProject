@@ -1,4 +1,4 @@
-Template.snippets.helpers({
+Template.snippetss.helpers({
     snippets: function() {
         return Snippets.find().fetch();
     }
