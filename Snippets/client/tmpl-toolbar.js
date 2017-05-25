@@ -11,7 +11,9 @@ Template.toolbar.events({
 
 function addSnippet(){
     var txtNode = $('#txtAdd');
-    if(!txtNode || !txtNode.val()) return;
-    Snippets.insert({text:txtNode.val()});
+    if(!txtNode || !txtNode.val() || !Meteor.userId()) return;
+    Snippets.insert({
+        owner:Meteor.userId(),
+        text:txtNode.val()});
     txtNode.val('');
 };

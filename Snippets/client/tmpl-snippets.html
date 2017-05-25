@@ -3,9 +3,15 @@
         {{#each snippetsy}}
         <!--the each loop will go over each snippet in the collection
         and display it as an individual line-->
+        {{#if isLink}}
+        <a href={{URL}}>
             <div class="snippet">{{text}}</div>
             <!--the {{text}} field is a pointer to a property inside
             the collection-->
+        </a>
+        {{else}}
+            <div class="snippet">{{text}}</div>
+        {{/if}}
         {{/each}}
     </div>
 </template>
